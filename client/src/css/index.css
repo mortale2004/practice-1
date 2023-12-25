@@ -1,0 +1,81 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root{
+  --primary-color: hsl(0, 0%, 0%);
+  --secondary-color: hsl(0, 0%, 20%);
+  --third-color: hsl(240, 100%, 27%);
+  --surface-color: hsl(0, 0%, 83%);
+  --bg-color: hsl(0, 0%, 90%);
+}
+
+a{
+  text-decoration: none;
+}
+
+a,p{
+  font-size: 1.5rem;
+}
+
+h1{
+  font-size: 2rem;
+}
+
+h2{
+  font-size: 1.8rem;
+}
+
+li{
+  list-style: none;
+}
+
+.cotainer{
+  display: flex;
+  align-items: center;
+  display: flex;
+
+}
+
+form{
+  max-width: 50rem;
+  margin: 0 auto;
+  background-color: rgb(26, 152, 152);
+  padding: 3rem;
+  border-radius: 1rem;
+}
+form button{
+  width: 100%;
+  padding: 7px 10px;
+  margin: 1rem 0;
+}
+input,textarea, select{
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 8px 10px;
+  background-color: hsl(34, 78%, 95%);
+  border-radius: 0.51rem;
+  margin: 0 0 0.4rem 0;
+}
+
+textarea{
+  resize: none;
+  max-height: 5rem;
+}
+
+.radioCon{
+  display: flex;
+  width: 100%;
+}
+.radioCon .control-group{
+  width: 25%;
+  display: flex;
+
+}
+input:focus{
+  outline: none;
+}
