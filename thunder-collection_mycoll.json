@@ -1,0 +1,428 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "mycoll",
+    "dateExported": "2023-12-25T11:25:16.536Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "04029ad2-472e-438c-b408-e200959d1ab1",
+            "name": "questionType",
+            "containerId": "",
+            "created": "2023-12-25T06:21:59.039Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "6da366dc-3879-4783-94f7-a1c37954c61f",
+            "name": "class",
+            "containerId": "",
+            "created": "2023-12-25T06:44:16.821Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "b768d436-4a58-42a1-9a05-f0745faa590e",
+            "name": "subject",
+            "containerId": "",
+            "created": "2023-12-25T06:59:03.042Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "8b39cf9f-5510-47a5-b5a5-4becf7b47a8c",
+            "name": "question",
+            "containerId": "",
+            "created": "2023-12-25T07:17:06.161Z",
+            "sortNum": 40000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "e900a799-bdae-4cde-8545-364cb33a98cb",
+            "colId": "840a2c5d-5706-4147-bc4a-15da8b9b4c38",
+            "containerId": "04029ad2-472e-438c-b408-e200959d1ab1",
+            "name": "createtype",
+            "url": "http://localhost:8080/api/questiontypes",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-12-25T06:22:05.170Z",
+            "modified": "2023-12-25T11:22:12.470Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"MCQ\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6f76c320-b66e-43f9-bcea-e221e1fe18de",
+            "colId": "840a2c5d-5706-4147-bc4a-15da8b9b4c38",
+            "containerId": "6da366dc-3879-4783-94f7-a1c37954c61f",
+            "name": "create class",
+            "url": "http://localhost:8080/api/classes",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-12-25T06:44:16.821Z",
+            "modified": "2023-12-25T11:21:41.943Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"10th\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8169d950-6ef1-49f8-9415-b9427f042778",
+            "colId": "840a2c5d-5706-4147-bc4a-15da8b9b4c38",
+            "containerId": "b768d436-4a58-42a1-9a05-f0745faa590e",
+            "name": "create subject",
+            "url": "http://localhost:8080/api/subjects",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-12-25T06:59:03.042Z",
+            "modified": "2023-12-25T11:21:56.515Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"english\",\n  \"classId\": \"658965c3690f424010f0807c\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "924cf5c6-bd5c-4e3a-a4ea-f6297cd6b2c0",
+            "colId": "840a2c5d-5706-4147-bc4a-15da8b9b4c38",
+            "containerId": "8b39cf9f-5510-47a5-b5a5-4becf7b47a8c",
+            "name": "create question",
+            "url": "http://localhost:8080/api/questions/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-12-25T07:17:06.161Z",
+            "modified": "2023-12-25T11:22:55.532Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"question\": \"How is theprim ministde3 of Inddia\",\n  \"options\": [\"modi\", \"gandhi\", \"gadkari\", \"yogi\"],\n  \"solution\": 2,\n  \"subjectId\": \"658965d3690f424010f08080\",\n  \"classId\": \"658965c3690f424010f0807c\",\n  \"queTypeId\": \"658965e3690f424010f08083\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2dd541cd-8b9b-420e-9837-3585f8261d7b",
+            "colId": "840a2c5d-5706-4147-bc4a-15da8b9b4c38",
+            "containerId": "04029ad2-472e-438c-b408-e200959d1ab1",
+            "name": "update type",
+            "url": "http://localhost:8080/api/questiontypes/65895023d9224a4f514053bd",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2023-12-25T06:29:47.125Z",
+            "modified": "2023-12-25T09:49:46.329Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"True/False\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c89eb3e4-cc82-4998-a837-5727648cd3e7",
+            "colId": "840a2c5d-5706-4147-bc4a-15da8b9b4c38",
+            "containerId": "6da366dc-3879-4783-94f7-a1c37954c61f",
+            "name": "update class",
+            "url": "http://localhost:8080/api/classes/658928a3448147bcd0581da2",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2023-12-25T06:44:16.822Z",
+            "modified": "2023-12-25T08:11:10.100Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"df\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c6e3a928-65d7-4474-8b7d-1c60c31575ac",
+            "colId": "840a2c5d-5706-4147-bc4a-15da8b9b4c38",
+            "containerId": "b768d436-4a58-42a1-9a05-f0745faa590e",
+            "name": "update subject",
+            "url": "http://localhost:8080/api/subjects/65892929c94c84f70d930184",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2023-12-25T06:59:03.043Z",
+            "modified": "2023-12-25T07:07:17.730Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"math\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "13f73a3d-5434-4b72-a6ba-b65696cb7659",
+            "colId": "840a2c5d-5706-4147-bc4a-15da8b9b4c38",
+            "containerId": "8b39cf9f-5510-47a5-b5a5-4becf7b47a8c",
+            "name": "update question",
+            "url": "http://localhost:8080/api/questions/6589660f690f424010f08089",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2023-12-25T07:17:06.162Z",
+            "modified": "2023-12-25T11:23:32.030Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"question\": \"Who is the prime minister of India\",\n  \"options\": [\"modi\", \"ambani\", \"gadkari\", \"yogi\"],\n  \"solution\": 1\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "42aff4b4-00dd-4838-ba92-5a5972c77c58",
+            "colId": "840a2c5d-5706-4147-bc4a-15da8b9b4c38",
+            "containerId": "04029ad2-472e-438c-b408-e200959d1ab1",
+            "name": "delete type",
+            "url": "http://localhost:8080/api/questiontypes/658929acced85a82db6ab02",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2023-12-25T06:33:40.970Z",
+            "modified": "2023-12-25T08:10:51.425Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5958cf8a-5b7c-46e8-9edc-ed4b7016500b",
+            "colId": "840a2c5d-5706-4147-bc4a-15da8b9b4c38",
+            "containerId": "6da366dc-3879-4783-94f7-a1c37954c61f",
+            "name": "delete class",
+            "url": "http://localhost:8080/api/classes/6589256ecc48b87c401eeba",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2023-12-25T06:44:16.823Z",
+            "modified": "2023-12-25T08:11:15.592Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5c604630-d749-4347-bfb7-4b94f1e68f58",
+            "colId": "840a2c5d-5706-4147-bc4a-15da8b9b4c38",
+            "containerId": "b768d436-4a58-42a1-9a05-f0745faa590e",
+            "name": "delete subject",
+            "url": "http://localhost:8080/api/subjects/65892929c94c84f70d93018",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2023-12-25T06:59:03.044Z",
+            "modified": "2023-12-25T08:11:32.146Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "1fc85bdb-ec43-4251-be02-ed068ab95b33",
+            "colId": "840a2c5d-5706-4147-bc4a-15da8b9b4c38",
+            "containerId": "8b39cf9f-5510-47a5-b5a5-4becf7b47a8c",
+            "name": "delete question",
+            "url": "http://localhost:8080/api/questions/6589345e5b590a07c06e1ac0",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2023-12-25T07:17:06.163Z",
+            "modified": "2023-12-25T07:54:06.223Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "96e9d367-8731-47c9-8baf-bb654c6adc74",
+            "colId": "840a2c5d-5706-4147-bc4a-15da8b9b4c38",
+            "containerId": "04029ad2-472e-438c-b408-e200959d1ab1",
+            "name": "get one question type",
+            "url": "http://localhost:8080/api/questiontypes/658929acced85a82db6ab02",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-12-25T06:37:31.822Z",
+            "modified": "2023-12-25T08:10:58.494Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6fd9c0a3-84c1-4700-8099-3e2c13d3512a",
+            "colId": "840a2c5d-5706-4147-bc4a-15da8b9b4c38",
+            "containerId": "6da366dc-3879-4783-94f7-a1c37954c61f",
+            "name": "get one class",
+            "url": "http://localhost:8080/api/classes/658928a3448147bcd5081da",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-12-25T06:44:16.824Z",
+            "modified": "2023-12-25T08:11:24.051Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f58ac764-d3cf-4e89-b1e8-64f7a06d8a69",
+            "colId": "840a2c5d-5706-4147-bc4a-15da8b9b4c38",
+            "containerId": "b768d436-4a58-42a1-9a05-f0745faa590e",
+            "name": "get one subject",
+            "url": "http://localhost:8080/api/subjects/65892a0cced85a82db6ab03b",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-12-25T06:59:03.045Z",
+            "modified": "2023-12-25T08:11:40.210Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "42fffa03-24ee-452d-8ab7-98d804f4649d",
+            "colId": "840a2c5d-5706-4147-bc4a-15da8b9b4c38",
+            "containerId": "8b39cf9f-5510-47a5-b5a5-4becf7b47a8c",
+            "name": "get one question",
+            "url": "http://localhost:8080/api/questions/65893529e470afb10bb5a9c",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-12-25T07:17:06.164Z",
+            "modified": "2023-12-25T07:59:42.722Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "8aecde32-2e0b-41a0-895f-3079fdbb14d6",
+            "colId": "840a2c5d-5706-4147-bc4a-15da8b9b4c38",
+            "containerId": "04029ad2-472e-438c-b408-e200959d1ab1",
+            "name": "get all question types",
+            "url": "http://localhost:8080/api/questiontypes",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-12-25T06:38:05.280Z",
+            "modified": "2023-12-25T07:06:06.041Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "34283cf9-fede-4dc0-84c8-717fb807868d",
+            "colId": "840a2c5d-5706-4147-bc4a-15da8b9b4c38",
+            "containerId": "6da366dc-3879-4783-94f7-a1c37954c61f",
+            "name": "get all classes",
+            "url": "http://localhost:8080/api/classes/",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-12-25T06:44:16.825Z",
+            "modified": "2023-12-25T06:49:23.664Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "08a479c2-0645-43d8-945f-8ab5fbd7c6a6",
+            "colId": "840a2c5d-5706-4147-bc4a-15da8b9b4c38",
+            "containerId": "b768d436-4a58-42a1-9a05-f0745faa590e",
+            "name": "get all subject",
+            "url": "http://localhost:8080/api/subjects",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-12-25T06:59:03.046Z",
+            "modified": "2023-12-25T07:07:12.273Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c69c6d95-4d5c-49fc-a0a6-beaf59cca57d",
+            "colId": "840a2c5d-5706-4147-bc4a-15da8b9b4c38",
+            "containerId": "8b39cf9f-5510-47a5-b5a5-4becf7b47a8c",
+            "name": "get all question",
+            "url": "http://localhost:8080/api/questions",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-12-25T07:17:06.165Z",
+            "modified": "2023-12-25T11:24:38.484Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ff6254a1-937c-4281-adfb-fed27c76f380",
+            "colId": "840a2c5d-5706-4147-bc4a-15da8b9b4c38",
+            "containerId": "8b39cf9f-5510-47a5-b5a5-4becf7b47a8c",
+            "name": "with filters and pagination",
+            "url": "http://localhost:8080/api/questions?type=658965e3690f424010f08083&pageNo=1&limit=2",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-12-25T11:24:18.088Z",
+            "modified": "2023-12-25T11:25:04.699Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "type",
+                    "value": "658965e3690f424010f08083",
+                    "isPath": false
+                },
+                {
+                    "name": "pageNo",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "limit",
+                    "value": "2",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        }
+    ]
+}
