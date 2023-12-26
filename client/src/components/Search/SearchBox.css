@@ -1,0 +1,19 @@
+
+.searchBox{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.searchBox svg{
+    position: absolute;
+    left: 1rem;
+    top: 45%;
+    transform: translateY(-50%);
+    color: rgb(26, 145, 240);;
+}
+.searchBox input{
+    width: 100%;
+    padding: 0.7rem 1.5rem 0.7rem 4rem;
+}

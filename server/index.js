@@ -13,6 +13,7 @@ app.use("/api/classes", require("./routes/Class"));
 app.use("/api/subjects", require("./routes/Subject"));
 app.use("/api/questions", require("./routes/Question"));
 app.use("/api/questiontypes", require("./routes/QuestionType"));
+app.use("/api/sourcetags", require("./routes/SourceTag"));
 
 
 

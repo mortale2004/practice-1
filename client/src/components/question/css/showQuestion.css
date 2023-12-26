@@ -1,0 +1,56 @@
+.showQuestionCon{
+    width: 100%;
+}
+.showQuestionCon >h1{
+    margin: 2rem 0;
+    font-size: 2.5rem;
+}
+.searchMainCon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.searchMainCon .form-control{
+    flex-direction: row;
+}
+.searchMainCon .form-control input{
+    width: 8rem;
+}
+.searchMainCon .form-control input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+.showQuestionCon .form-control:nth-child(1) label{
+    width: 100%;
+}
+.searchMainCon .form-control{
+    display: flex;
+}
+
+.showQuestionCon .control-group{
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    gap: 2rem;
+}
+
+.radio-group .form-control{
+    position: relative;
+}
+.radio-group .form-control label{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.radio-group .form-control input[type="radio"]{
+    
+    width: 100%;
+    height: 100%;
+}
+
+
+.radio-group .form-control input[type="radio"] {
+    width: 100%;
+}
+

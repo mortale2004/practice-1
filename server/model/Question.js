@@ -26,6 +26,10 @@ const QuestionSchema = mongoose.Schema({
         type: mongoose.Types.ObjectId,
         ref: "subject",
     },
+    sourceTagId: {
+        type: mongoose.Types.ObjectId,
+        ref: "sourcetag",
+    },
 });
 
 module.exports = mongoose.model("question", QuestionSchema);

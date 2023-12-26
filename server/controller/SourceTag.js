@@ -1,24 +1,24 @@
 const mongoose = require("mongoose");
 const {validationResult} = require("express-validator");
-const Subject = require("../model/Subject"); 
+const SourceTag = require("../model/SourceTag"); 
 
 // create
-const createSubject = async (req, res)=>{
+const createSourceTag = async (req, res)=>{
     if (!validationResult(req).isEmpty())
     {
         return res.status(401).json({status: "error", result: validationResult(req).errors.map(error=>error.msg)})
     }
 
     try {
-        let subject = await Subject.findOne({name: req.body.name});
+        let sourceTag = await SourceTag.findOne({name: req.body.name});
 
-        if (subject && subject.classId === req.body.classId)
+        if (sourceTag)
         {
-            return res.status(400).json({status: "error", result: ["This Subject Already Exist!"]});
+            return res.status(400).json({status: "error", result: ["This Source Tag Already Exist!"]});
         }
         
-        subject = await Subject.create(req.body);
-        return res.status(201).json({status: "success", result: [subject]});
+        sourceTag = await SourceTag.create(req.body);
+        return res.status(201).json({status: "success", result: [sourceTag]});
 
 
     } catch (error) {
@@ -28,7 +28,7 @@ const createSubject = async (req, res)=>{
 }
 
 // update
-const updateSubject = async (req, res)=>{
+const updateSourceTag = async (req, res)=>{
     if (!validationResult(req).isEmpty())
     {
         return res.status(401).json({status: "error", result: validationResult(req).errors.map(error=>error.msg)})
@@ -39,25 +39,23 @@ const updateSubject = async (req, res)=>{
         return res.status(404).json({status: "error", result: ["Invalid Mongoose Id"]});
     }
 
-
     try {
-        let subject = await Subject.findById(req.params.id);
+        let sourceTag = await SourceTag.findById(req.params.id);
 
-        if (!subject)
+        if (!sourceTag)
         {
-            return res.status(404).json({status: "error", result: ["Subject  Not Found!"]})
+            return res.status(404).json({status: "error", result: ["Source Tag  Not Found!"]})
         }
 
-        subject = await Subject.findOne({name: req.body.name});
+        sourceTag = await SourceTag.findOne({name: req.body.name});
 
-        if (subject && subject.name!==req.body.name)
+        if (sourceTag && sourceTag.name!==req.body.name)
         {
-            return res.status(400).json({status: "error", result: ["This Subject Already Exist!"]});
+            return res.status(400).json({status: "error", result: ["This Source Tag Already Exist!"]});
         }
-
-        subject = await Subject.findByIdAndUpdate(req.params.id, {...subject, ...req.body}, {new: true});
         
-        return res.status(201).json({status: "success", result: [subject]});
+        sourceTag = await SourceTag.findByIdAndUpdate(req.params.id, req.body, {new: true});
+        return res.status(201).json({status: "success", result: [sourceTag]});
 
 
     } catch (error) {
@@ -69,22 +67,23 @@ const updateSubject = async (req, res)=>{
 
 
 // read one
-const getOneSubject = async (req, res)=>{
-
+const getOneSourceTag = async (req, res)=>{
+    
     if (!mongoose.isValidObjectId(req.params.id))
     {
         return res.status(404).json({status: "error", result: ["Invalid Mongoose Id"]});
     }
 
-    try {
-        let subject = await Subject.findById(req.params.id);
 
-        if (!subject)
+    try {
+        let sourceTag = await SourceTag.findById(req.params.id);
+
+        if (!sourceTag)
         {
-            return res.status(404).json({status: "error", result: ["Subject Not Found!"]})
+            return res.status(404).json({status: "error", result: ["Source Tag Not Found!"]})
         }
 
-        return res.status(201).json({status: "success", result: [subject]});
+        return res.status(201).json({status: "success", result: [sourceTag]});
 
 
     } catch (error) {
@@ -94,10 +93,10 @@ const getOneSubject = async (req, res)=>{
 }
 
 // read all
-const getAllSubjects = async (req, res)=>{
+const getAllSourceTags = async (req, res)=>{
     try {
-        let subject = await Subject.find();
-        return res.status(201).json({status: "success", result: subject});
+        let sourceTag = await SourceTag.find();
+        return res.status(201).json({status: "success", result: sourceTag});
     } catch (error) {
         console.log(error);
         return res.status(500).json({status: "error", result: ["Internal Server Error!"]});
@@ -107,23 +106,22 @@ const getAllSubjects = async (req, res)=>{
 
 
 // delete
-const deleteSubject = async (req, res)=>{
+const deleteSourceTag = async (req, res)=>{
 
     if (!mongoose.isValidObjectId(req.params.id))
     {
         return res.status(404).json({status: "error", result: ["Invalid Mongoose Id"]});
     }
 
-
     try {
-        let subject = await Subject.findById(req.params.id);
+        let sourceTag = await SourceTag.findById(req.params.id);
 
-        if (!subject)
+        if (!sourceTag)
         {
-            return res.status(404).json({status: "error", result: ["Subject  Not Found!"]})
+            return res.status(404).json({status: "error", result: ["Source Tag  Not Found!"]})
         }
 
-        await Subject.findByIdAndDelete(req.params.id);
+        await SourceTag.findByIdAndDelete(req.params.id);
         return res.status(201).json({status: "success", result: ["Deleted Succuessfully..."]});
 
 
@@ -135,4 +133,4 @@ const deleteSubject = async (req, res)=>{
 
 
 
-module.exports=  {createSubject, updateSubject,  getOneSubject, getAllSubjects, deleteSubject};
+module.exports=  {createSourceTag, updateSourceTag,  getOneSourceTag, getAllSourceTags, deleteSourceTag};

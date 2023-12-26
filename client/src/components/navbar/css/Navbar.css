@@ -1,0 +1,36 @@
+.navBar{
+    background-color: hsl(203, 57%, 32%);
+    padding: 1rem 2rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+.navBar h1{
+    color: white;
+}
+.navBar ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navBar li a{
+    color: var(--bg-color);
+    padding: 1rem;
+}
+.navBar li{
+    padding: 1rem;
+    list-style: none;
+}
+.navBar li a{
+    transition: 0.5s all;
+    
+}
+.navBar li a:hover{
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white;
+}

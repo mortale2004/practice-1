@@ -1,0 +1,51 @@
+.questionScreenCon{
+    width: calc(100vw - 25rem);
+    padding: 5rem;
+}
+
+.questionScreenCon table, tr, td, th{
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 1rem;
+}
+.questionScreenCon table tr td:nth-child(1), td:nth-child(2)
+{
+    text-align: center;
+}
+.questionScreenCon table{
+    width: 100%;
+    overflow-x: scroll;
+}
+.questionScreenCon table td ul{
+    margin: 0 0 0 3rem;
+}
+.questionScreenCon table svg{
+    width: 2rem;
+    margin: 0.5rem;
+}
+.questionScreenCon table svg{
+    cursor: pointer;
+}
+.questionScreenCon .Trash{
+    color: hsl(0, 59%, 31%);
+}
+
+.questionScreenCon .Trash:hover{
+    filter: drop-shadow(0 0 5px hsl(0, 59%, 31%));
+}
+
+.questionScreenCon .Edit{
+    color: hsl(120, 25%, 33%);
+}
+
+.questionScreenCon .Edit:hover{
+    filter: drop-shadow(0 0 5px hsl(120, 25%, 33%)) ;
+}
+
+.questionScreenCon .Eye{
+    color: hsl(195, 53%, 39%);
+}
+
+.questionScreenCon .Eye:hover{
+    filter: drop-shadow(0 0 5px hsl(195, 53%, 39%)) ;
+}

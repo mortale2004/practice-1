@@ -3,6 +3,7 @@ const QuestionType = require("../model/QuestionType");
 const Class = require("../model/Class");
 const Subject = require("../model/Subject");
 const mongoose = require("mongoose");
+const SourceTag = require("../model/SourceTag");
 
 
 const validateQuestionId = async (req, res, next) => {
@@ -84,4 +85,24 @@ const validateSubjectId = async (req, res, next) => {
     }
 }
 
-module.exports = { validateQuestionId, validateQuestionTypeId, validateClassId, validateSubjectId };
+const validateSourceTagId = async (req, res, next) => {
+
+    if (!mongoose.isValidObjectId(req.body.sourceTagId))
+    {
+        return res.status(404).json({status: "error", result: ["Invalid Mongoose Id"]});
+    }
+
+    try {
+        const sourceTag = await SourceTag.findById(req.body.sourceTagId);
+
+        if (!sourceTag) {
+            return res.status(404).json({ status: "error", result: ["Source Tag Id Not Found!"] });
+        }
+        next();
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({ status: "error", result: ["Invalid Source Tag Id!"] });
+    }
+}
+
+module.exports = { validateQuestionId, validateQuestionTypeId, validateClassId, validateSubjectId, validateSourceTagId };

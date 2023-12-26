@@ -1,0 +1,21 @@
+.sideBar{
+    max-width: 30rem;
+    width: 25rem;
+    background-color: white;
+    height: calc(100vh - 5rem);
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    border: 1px solid black;
+}
+.sideBarItem{
+    border-bottom: 1px solid black;
+    background-color: aliceblue;
+    padding: 1.5rem 2rem;
+    user-select: none;
+    cursor: pointer;
+}
+.sideBar a{
+    color: black;
+    font-size: 300;
+}
